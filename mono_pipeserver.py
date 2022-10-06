@@ -16,6 +16,8 @@ WriteDword = 3
 WriteQword = 4
 WriteUtf8String = 5
 
+MONO_DATACOLLECTORVERSION = 22082022
+
 PID = 0
 API = 0
 SESSION = 0
@@ -70,6 +72,7 @@ class CEPIPECMD(IntEnum):
     MONOCMD_GETIMAGEFILENAME = 44
     MONOCMD_GETCLASSNESTINGTYPE = 45
     MONOCMD_LIMITEDCONNECTION = 46
+    MONOCMD_GETMONODATACOLLECTORVERSION = 47
 
 
 class BinaryReader:
@@ -232,7 +235,8 @@ def handler(pipe, command):
         method = reader.ReadUInt64()
         methodPtr = API.CompileMethod(method)
         writer.WriteUInt64(methodPtr)
-
+    elif command == CEPIPECMD.MONOCMD_GETMONODATACOLLECTORVERSION:
+        writer.WriteUInt32(MONO_DATACOLLECTORVERSION)
     else:
         pass
     return 1
