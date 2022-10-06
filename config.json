@@ -1,0 +1,6 @@
+{
+    "target": "",
+    "targetOS": "android",
+    "mode": "spawn",
+    "frida_server_ip": ""
+}
