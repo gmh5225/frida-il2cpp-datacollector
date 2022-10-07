@@ -392,7 +392,7 @@ var il2cpp_method_get_return_type = new NativeFunction(
 var il2cpp_class_from_typePtr = Module.findExportByName(coreLibraryName, 'il2cpp_class_from_type');
 var il2cpp_string_charsPtr = Module.findExportByName(coreLibraryName, 'il2cpp_string_chars');
 
-var mono_selfthread = mono_thread_attach(mono_domain_get());
+//var mono_selfthread = mono_thread_attach(mono_domain_get());
 
 function InitMono() {
   WriteQword(parseInt(hMono));

@@ -1,5 +1,8 @@
 # frida-il2cpp-datacollector
+
 Porting ce's monodatacollector to android/ios.
+
+Operation has been confirmed with `CEVersion 7.4.2` or later.
 
 # Usage
 
@@ -58,7 +61,9 @@ Start ceserver and select the application you started.
 adb forward tcp:52736 tcp:52736
 su -c ./ceserver
 ```
+
 Setting up Mono in CE
+
 ```
 Mono => Activate mono features
 ```
